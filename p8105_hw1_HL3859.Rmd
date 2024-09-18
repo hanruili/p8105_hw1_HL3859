@@ -29,6 +29,43 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, colour = species
 ggsave("scatterplot_hw1.pdf")
 ```
 
+## Problem 2
+
+```{r}
+library(tidyverse)
+
+df = tibble(
+  norm_samp = rnorm(10),
+  samp_g1 = norm_samp > 0,
+  char = sample(letters, 10),
+  factor = factor(sample(c("Level1", "Level2", "Level3"), 10, replace = TRUE))
+)
+df
+```
+
+```{r}
+library(tidyverse)
+
+df %>% pull(norm_samp) %>% mean()
+df %>% pull(samp_g1) %>% mean()
+df %>% pull(char) %>% mean()
+df %>% pull(factor) %>% mean()
+```
+
+Cannot calculate the mean of the character vector and the factor vector because they are not numeric.
+
+```{r}
+samp_g1_numeric <- as.numeric(df$samp_g1)
+
+char_numeric <- as.numeric(df$char)
+
+factor_numeric <- as.numeric(df$factor)
+```
+
+Characters cannot be directly interpreted as numbers.
+
+
+
 
 
 
