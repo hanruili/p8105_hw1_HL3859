@@ -1,0 +1,15 @@
+---
+title: "p8105_hw1_HL3859"
+author: "Hanrui Li"
+date: "2024-09-18"
+output: github_document
+---
+
+## Problem 1
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+
+
