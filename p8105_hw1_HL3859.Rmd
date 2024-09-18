@@ -11,5 +11,17 @@ output: github_document
 data("penguins", package = "palmerpenguins")
 ```
 
+```{r}
+penguins
+head(penguins)
+tail(penguins, 10)
+
+nrow(penguins)
+ncol(penguins)
+
+mean(penguins$flipper_length_mm, na.rm = TRUE)
+```
+
+
 
 
