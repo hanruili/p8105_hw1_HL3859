@@ -62,7 +62,11 @@ char_numeric <- as.numeric(df$char)
 factor_numeric <- as.numeric(df$factor)
 ```
 
+Logical vectors can be interpreted into numbers 0 and 1, so the mean can be calculated.
+
 Characters cannot be directly interpreted as numbers.
+
+Factor vectors have "level1", "level2", and "level3", which can be interpreted as numbers 1, 2, and 3, so the mean can be calculated.
 
 
 
