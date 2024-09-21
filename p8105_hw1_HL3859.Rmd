@@ -11,16 +11,25 @@ output: github_document
 data("penguins", package = "palmerpenguins")
 ```
 
-```{r}
-penguins
-head(penguins)
-tail(penguins, 10)
+The `penguins` dataset contains `r nrow(penguins)` rows and `r ncol(penguins)` columns.
 
-nrow(penguins)
-ncol(penguins)
+- `species`: 3 species of penguins (`r unique(penguins$species)`)
 
-mean(penguins$flipper_length_mm, na.rm = TRUE)
-```
+- `island`: 3 islands on which the penguins were observed (`r unique(penguins$island)`)
+
+- `bill_length_mm`: The length of the penguin's bill in millimeters ranging from `r range(penguins$bill_length_mm, na.rm = TRUE)[1]` to `r range(penguins$bill_length_mm, na.rm = TRUE)[2]`
+
+- `bill_depth_mm`: The depth of the penguin's bill in millimeters ranging from `r range(penguins$bill_depth_mm, na.rm = TRUE)[1]` to `r range(penguins$bill_depth_mm, na.rm = TRUE)[2]`
+
+- `flipper_length_mm`: The length of the penguin’s flipper in millimeters ranging from `r range(penguins$flipper_length_mm, na.rm = TRUE)[1]` to `r range(penguins$flipper_length_mm, na.rm = TRUE)[2]`
+
+- `body_mass_g`: The body mass of the penguin in grams ranging from `r range(penguins$body_mass_g, na.rm = TRUE)[1]` to `r range(penguins$body_mass_g, na.rm = TRUE)[2]`
+
+- `sex`: The penguins' sex (male or female)
+
+- `year`: Year is from `r range(penguins$year, na.rm = TRUE)[1]` to `r range(penguins$year, na.rm = TRUE)[2]`
+
+- The mean flipper length of the penguins is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` millimeters.
 
 ```{r message=FALSE, warning=FALSE}
 library(ggplot2)
